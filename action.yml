@@ -1,4 +1,4 @@
-name: "Convert Github Secrets or GitHub Variables to Environment variables by FranciscoKloganB"
+name: "Github Secrets or GitHub Variables to Environment Variables - Repo Racers Pro Support"
 description: "Utility Action that exports all GitHub Secrets to Environment Variables with less maintenance overhead"
 author: "Francisco Teixeira de Barros"
 inputs:

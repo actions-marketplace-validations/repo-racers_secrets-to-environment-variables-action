@@ -67,7 +67,7 @@ Original credit goes to [oNaiPs](https://github.com/oNaiPs/secrets-to-env-action
 Add the following action to your workflow:
 
 ```yaml
-- uses: repo-racers/secrets-to-environment-variables-action@v0.0.1
+- uses: repo-racers/secrets-to-environment-variables-action@v0.0.2
   with:
     secrets: ${{ toJSON(secrets) }}
 ```
@@ -81,7 +81,7 @@ _Note the `secrets` key. It is **mandatory** so the action can read and export t
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: repo-racers/secrets-to-environment-variables-action@v0.0.1
+- uses: repo-racers/secrets-to-environment-variables-action@v0.0.2
   with:
     secrets: ${{ toJSON(secrets) }}
 - run: echo "Value of MY_SECRET: $MY_SECRET"
@@ -106,7 +106,7 @@ steps:
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: repo-racers/secrets-to-environment-variables-action@v0.0.1
+  - uses: repo-racers/secrets-to-environment-variables-action@v0.0.2
     with:
       include: MY_SECRET, MY_OTHER_SECRETS_*
       secrets: ${{ toJSON(secrets) }}
@@ -126,7 +126,7 @@ It is possible to add and remove prefixes and suffixes from all the secrets foun
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: repo-racers/secrets-to-environment-variables-action@v0.0.1
+  - uses: repo-racers/secrets-to-environment-variables-action@v0.0.2
     with:
       add-prefix: PREFIX_
       secrets: ${{ toJSON(secrets) }}
@@ -138,7 +138,7 @@ steps:
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: repo-racers/secrets-to-environment-variables-action@v0.0.1
+  - uses: repo-racers/secrets-to-environment-variables-action@v0.0.2
     with:
       add-suffix: _SUFFIX
       secrets: ${{ toJSON(secrets) }}
@@ -152,7 +152,7 @@ Remove a prefix to all exported secrets, if present.
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: repo-racers/secrets-to-environment-variables-action@v0.0.1
+  - uses: repo-racers/secrets-to-environment-variables-action@v0.0.2
     with:
       remove-prefix: PREFIX_
       secrets: ${{ toJSON(secrets) }}
@@ -166,7 +166,7 @@ Remove a prefix to all exported secrets, if present.
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: repo-racers/secrets-to-environment-variables-action@v0.0.1
+  - uses: repo-racers/secrets-to-environment-variables-action@v0.0.2
     with:
       remove-suffix: _SUFFIX
       secrets: ${{ toJSON(secrets) }}
@@ -180,7 +180,7 @@ env:
   MY_SECRET: DONT_OVERRIDE
 steps:
 - uses: actions/checkout@v3
-- uses: repo-racers/secrets-to-environment-variables-action@v0.0.1
+- uses: repo-racers/secrets-to-environment-variables-action@v0.0.2
   with:
     override: true
     secrets: ${{ toJSON(secrets) }}
@@ -194,7 +194,7 @@ Converts all exported secrets case to `lower` or `upper`. Default is `upper`.
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: repo-racers/secrets-to-environment-variables-action@v0.0.1
+  - uses: repo-racers/secrets-to-environment-variables-action@v0.0.2
     with:
       convert: lower
       secrets: ${{ toJSON(secrets) }}
