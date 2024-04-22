@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "module": "CommonJS",
+    "target": "ESNext"
+  },
+  "include": [
+    "src",
+    ".commitlintrc.cjs",
+    ".eslintrc.cjs",
+    ".lintstagedrc.cjs",
+    ".prettierrc.cjs"
+  ],
+  "exclude": ["node_modules"]
+}
